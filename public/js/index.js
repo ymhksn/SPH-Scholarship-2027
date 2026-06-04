@@ -40,6 +40,20 @@ document.querySelectorAll('.closeModalScroll').forEach(link => {
     });
 });
 
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('hide.bs.modal', function () {
+        this.querySelectorAll('iframe[src*="youtube.com"]').forEach(iframe => {
+            iframe.dataset.src = iframe.src;
+            iframe.src = '';
+        });
+    });
+    modal.addEventListener('show.bs.modal', function () {
+        this.querySelectorAll('iframe[data-src]').forEach(iframe => {
+            iframe.src = iframe.dataset.src;
+        });
+    });
+});
+
 closeOffCanvasLinks.forEach(link => {
     link.addEventListener('click', (event) => {
 
