@@ -1,0 +1,23 @@
+# Claude Code
+CLAUDE.md
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.bak
